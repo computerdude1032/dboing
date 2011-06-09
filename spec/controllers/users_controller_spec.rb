@@ -38,6 +38,31 @@ describe UsersController do
       get 'new'
       response.should have_selector("title", :content => "Sign up")
     end
+  
+  
+  describe "POST 'create'" do
+    describe "success" do
+      before(:each) do
+        @attr={:name => "New User", :email => "user1234@example.com", :password => "test", :password_confirmation =>"test"}
+      end
+      
+    end
+    describe "failure" do
+      before(:each) do
+        @attr={:name =>"", :email=>"", :password=>"", :password_confirmation=>""}
+      end
+      
+      it "should not create a user" do
+        lambda do
+          post :create, :user =>@attr
+        end.should_not change(User, :count)
+      end
+      
+      it "should render the 'new' page" do
+        post :create, :user =>@attr
+        response.should render_template('new')
+      end
+    end
   end
-
+end
 end
