@@ -43,7 +43,7 @@ describe UsersController do
   describe "POST 'create'" do
     describe "success" do
       before(:each) do
-        @attr={:name => "New User", :email => "user1234@example.com", :password => "test", :password_confirmation =>"test"}
+        @attr={:name => "New User", :email => "email@example.com", :password => "test", :password_confirmation =>"test"}
       end
       
     end
