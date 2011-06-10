@@ -8,7 +8,7 @@ Dboing::Application.routes.draw do
   match '/news', :to => 'pages#news'
   match '/signup', :to => 'users#new'
   match '/signin', :to => 'sessions#new'
-  match '/signin', :to => 'sessions#destroy'
+  match '/signout', :to => 'sessions#destroy'
   root :to => 'pages#home'
 
   # The priority is based upon order of creation:

@@ -17,8 +17,8 @@ class SessionsController < ApplicationController
   
   def destroy
     sign_out
-    flash.now[:error]="You have been signed out and your cookie has been deleted.  Please come back soon!"
     redirect_to root_path
+    flash[:success]="You have been signed out and your cookie has been deleted.  Please come back soon!"
     
   end
 end
