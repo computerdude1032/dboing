@@ -1,6 +1,12 @@
-<h1>Sample App</h1>
+<h1>dboing</h1>
+<% if signed_in? %>
 <p>
-	Welcome! This is the home page!
+	Welcome back! This is the home page of dboing! The site is being updated frequently, so come back soon to see more!!
 </p>
 
+<% else %>
+<p>
+	Welcome to dboing.  Feel free to explore our site as we develop it, but to get the most from the site, you should sign up now!
+</p>
 <%= link_to "Sign up now!",signup_path, :class => "signup_button round"%>
+<% end %>

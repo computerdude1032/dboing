@@ -1,3 +1,7 @@
+<% if signed_in? %>
+<h1>Hey!</h1>
+<p> We've noticed that you're already logged in.  If you really want to login as a different user, you need to <%= link_to "sign out", signout_path, :method => :delete %> first.</p>
+<%else%>
 <h1>Sign in</h1>
 
 <%= form_for(:session, :url => sessions_path) do |f| %>
@@ -16,3 +20,4 @@
 
 <p>New user?  <%= link_to "Sign up now!", signup_path %></p>
 <p>Forgot your password?  Too bad! Check back later for password reset functionality!</p>
+<%end%>

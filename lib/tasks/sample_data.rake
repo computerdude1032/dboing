@@ -5,7 +5,7 @@ namespace :db do
   task :populate => :environment do
     require 'faker'
     Rake::Task['db:reset'].invoke
-    admin= User.create!(:name => "Dan", :email=>"dan@dan.com", :password =>"daniel", :password_confirmation=> "daniel")
+    admin= User.create!(:name => "Dan", :email=>"computerdude1032@gmail.com", :password =>"daniel", :password_confirmation=> "daniel")
     admin.toggle!(:admin)
     99.times do |n|
       name = Faker::Name.name
