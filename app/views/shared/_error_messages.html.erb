@@ -1,9 +1,9 @@
-<% if @user.errors.any? %>
+<% if object.errors.any? %>
 	<div id="error_explanation">
-		<h2>Sorry! <%= pluralize(@user.errors.count,"mistake")%> prevented your account from being created:</h2>
+		<h2>Sorry! <%= pluralize(object.errors.count,"mistake")%> prevented this <%= object.class.to_s.underscore.humanize.downcase %> from being saved:</h2>
 		<p>Please correct the following <%= pluralize(@user.errors.count,"problem")%>:</p>
 		<ul>
-			<% @user.errors.full_messages.each do |msg| %>
+			<% object.errors.full_messages.each do |msg| %>
 				<li><%= msg %></li>
 			<%end%>
 		</ul>
