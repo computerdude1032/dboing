@@ -234,11 +234,11 @@ div.user_info span.microposts{
 	font-size: 80%;
 }
 
-forms.new_micropost {
+form.new_micropost {
 	margin-bottom: 2em;
 }
 
-forms.new_micropost textarea{
+form.new_micropost textarea{
 	height: 4em;
 	margin-bottom: 0;
 }
