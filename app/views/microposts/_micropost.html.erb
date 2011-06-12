@@ -8,7 +8,7 @@
 	<% user= micropost.user rescue User.find(micropost.user_id) %>
 	<% if current_user?(user) %>
 	<td>
-		<%= link_to "delete", micropost, :method =>delete, :confirm => "Really delete?", :title => micropost.content %>
+		<%= link_to "delete", micropost, :method => :delete, :confirm => "Really delete?", :title => micropost.content %>
 	</td>
 	<%end%>
 </tr>
