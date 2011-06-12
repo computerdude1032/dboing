@@ -3,7 +3,18 @@
 <p>
 	Welcome back! This is the home page of dboing! The site is being updated frequently, so come back soon to see more!!
 </p>
-
+	<table class="front" summary="For signed-in users">
+		<tr>
+			<td class="main">
+				<h1 class="micropost">What's up?</h1>
+				<%=render 'shared/micropost_form' %>
+				<%=render 'shared/feed'%>
+			</td>
+			<td class="sidebar round">
+				<%=render 'shared/user_info'%>
+			</td>
+		</tr>
+	</table>
 <% else %>
 <p>
 	Welcome to dboing.  Feel free to explore our site as we develop it, but to get the most from the site, you should sign up now!

@@ -1,4 +1,5 @@
 require File.expand_path('../boot', __FILE__)
+#include 'ssl_requirement'
 
 require 'rails/all'
 
