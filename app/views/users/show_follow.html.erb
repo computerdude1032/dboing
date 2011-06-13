@@ -1,0 +1,25 @@
+<table summary ="Information about following/followers">
+	<tr>
+		<td class="main">
+			<%if @title == "Followers"%><h1><%=@user.username%>'s <%=@title %></h1>
+			<%else%><h1><%=@user.username%> is <%=@title %>:</h1><%end%>
+			<% unless @users.empty? %>
+				<ul class="users">
+					<%=render @users %>
+				</ul>
+				<%= will_paginate @users %>
+			<%end%>
+		</td> 
+		<td class ="sidebar round">
+			<strong>Name </strong><%=@user.username%><br />
+			<strong>URL </strong><%=link_to user_path(@user),@user%><br />
+			<strong>Posts </strong><%=@user.microposts.count%>
+			<%= render 'shared/stats' %>
+			<% unless @users.empty? %>
+				<% @users.each do |user| %>
+					<%=link_to gravatar_for(user, :size =>30), user%>
+				<%end%>
+			<%end%>
+		</td>
+	</tr>
+</table>
