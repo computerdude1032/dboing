@@ -1,7 +1,6 @@
-<h1>dboing</h1>
 <% if signed_in? %>
 <p>
-	Welcome back! This is the home page of dboing! The site is being updated frequently, so come back soon to see more!!
+	Welcome back, <%=current_user.name%>! This is the home page of dboing! On this page you can update your status and see the feed of all the users you are following.
 </p>
 	<table class="front" summary="For signed-in users">
 		<tr>
@@ -16,8 +15,9 @@
 		</tr>
 	</table>
 <% else %>
+<h1>dboing</h1>
 <p>
-	Welcome to dboing.  Feel free to explore our site as we develop it, but to get the most from the site, you should sign up now!
+	Welcome to dboing!  To get the most from the site, you should sign up now!
 </p>
 <%= link_to "Sign up now!",signup_path, :class => "signup_button round"%>
 <% end %>
