@@ -1,12 +1,13 @@
-<h1> Edit user </h1>
+<h1> Update Account </h1>
+Note: In order to make any changes, you must enter and confirm a password.  It may be a new password, or it may be your current password.  Just don't forget it!<br/><br />
 <%= form_for(@user) do |f| %>
 	<%= render 'shared/error_messages', :object =>f.object %>
 	<div class="field">
-		<%=f.label :name %><br />
+		<%=f.label :name, "First Name" %><br />
 		<%=f.text_field :name %>
 	</div>
 	<div class="field">
-		<%= f.label :lname %><br />
+		<%= f.label :lname, "Last Name" %><br />
 		<%= f.text_field :lname %>
 	</div>
 	<div class="field">
@@ -22,7 +23,7 @@
 		<%= f.password_field :password %>
 	</div>
 	<div class="field">
-		<%= f.label :password %><br />
+		<%= f.label :password, "Password Confirmation" %><br />
 		<%= f.password_field :password %>
 	</div>
 	<div class="actions">
